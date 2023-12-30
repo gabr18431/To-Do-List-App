@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="todo-container">
+        <div class="add-task">
+            <input type="text">
+            <span class="plus">+</span>
+        </div>
+        <div class="tasks-content">
+            <span class="message">No Tasks To Show</span>
+            <!-- <span class="task-box">
+                task One 
+                <span class="delete">Delete</span>
+            </span>
+            <span class=" ">
+                task One 
+                <span class="delete">Delete</span>
+            </span> -->
+        </div>
+    </div>
+    <div class="tasks-stat">
+        <div class="tasks-count">
+            tasks: <span class="">0</span>
+        </div>
+        <div class="tasks-completed">
+            Completed: <span class="">0</span>
+        </div>
+    </div>
+
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        Please write the task description.
+    </div>
+    
+    <script src="maiin.js"></script>
+</body>
+</html>

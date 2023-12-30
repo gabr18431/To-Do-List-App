@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.todo-container {
+    width: 80%;
+    margin: 30px auto 0;
+    background-color: #f6f6f6;
+    min-width: 300px;
+    max-width: 700px;
+}
+
+.add-task {
+    padding: 15px;
+    background-color: #009688;
+    position: relative;
+}
+
+.add-task input {
+    display: inline-block;
+    padding: 10px 15px;
+    border: 0;
+    outline: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: calc(100% - 15px);
+    color: white;
+    font-size: 20px;
+}
+
+.add-task .plus {
+    height: 43.2px;
+    width: 43.2px;
+    border-radius: 50%;
+    position: absolute;
+    right: 12px;
+    line-height: 43px;
+    background-color: white;
+    font-size: 40px;
+    text-align: center;
+    color: #009688;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.add-task .plus:hover {
+    transform: rotate(90deg) scale(1.1);
+}
+
+.tasks-content {
+    padding: 15px;
+}
+
+.tasks-content .message {
+    color: #777;
+    font-size: 15px;
+}
+
+.tasks-content>span {
+    display: block;
+    background-color: white;
+    padding: 10px;
+}
+
+.tasks-content>span.message {
+    margin-bottom: 10px;
+}
+
+.tasks-content span .delete {
+    background-color: #e91e63;
+    color: white;
+    float: right;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tasks-content .task-box.finished {
+    text-decoration: line-through;
+}
+
+.tasks-stat {
+    display: flex;
+    width: 80%;
+    margin: 10px auto;
+    min-width: 300px;
+    max-width: 700px;
+    font-size: 13px;
+    color: #777;
+}
+
+.tasks-stat>div {
+    padding: 10px;
+    width: 50%;
+}
+
+.tasks-stat .tasks-completed {
+    text-align: right;
+}
+
+.tasks-stat span {
+    padding: 2px 5px;
+    border-radius: 4px;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.tasks-stat .tasks-completed span {
+    background-color: #03a9f4;
+}
+
+.tasks-stat .tasks-count span {
+    background-color: #e91e63;
+}
+
+.task-box:nth-child(even) {
+    transform: skewX(10deg);
+}
+
+.task-box:nth-child(odd) {
+    transform: skewX(-10deg);
+}
+
+.task-box:not(:last-child) {
+    border-bottom: 1px solid #f5f5f5;
+}
+.message {
+    transform: skewX(0);
+}
+
+/* The alert message box */
+.alert {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    margin-bottom: 15px;
+    opacity: 0;
+    transition: opacity 0.6s, top 0.3s; /* 600ms to fade out */
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
+}
+.alert.show {
+    top: 10px;
+    opacity: 1;
+}
